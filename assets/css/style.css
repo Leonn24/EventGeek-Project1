@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
         /* Add your custom styles here */
         body {
@@ -35,3 +36,73 @@
             border-radius: 5px;
             cursor: pointer;
         }
+=======
+body{
+    background-image: url(Events5.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+    
+
+/* CSS for the search button */
+.search-button {
+    padding: 6px 10px;
+    margin-left: 16px;
+    background: #0077b6;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+/* CSS for the search box */
+.search-box {
+    padding: 6px 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    width: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #000000;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+section {
+    padding: 20px;
+}
+
+
+.event {
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.rsvp-button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+footer {
+    padding: 20px;
+    color:#fff
+}
+>>>>>>> 87df01c60e171367d89a727d6be28287eaa32019
