@@ -52,6 +52,7 @@ async function createEvent(data) {
                 <h3 id="event-list">${listData.title}</h3>
                 <p>Date: ${listData.datetime_utc}</p>
                 <p>Venue: ${listData.venue.name}</p>
+                <p>Link: ${listData.venue.url}</p>
             `;
             document.getElementById('event-data').appendChild(eventElement);
         }
