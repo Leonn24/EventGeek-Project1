@@ -1,68 +1,188 @@
-body{
-    background-image: url(Events5.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
-}
-    
-
-/* CSS for the search button */
-.search-button {
-    padding: 6px 10px;
-    margin-left: 16px;
-    background: #0077b6;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    border-radius: 3px;
-}
-
-/* CSS for the search box */
-.search-box {
-    padding: 6px 10px;
-    border: 1px solid #ddd;
-    border-radius: 3px;
-    width: 100%;
-}
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    height: 100vh;
 }
 
 header {
     background-color: #000000;
     color: #fff;
-    padding: 1em;
-    text-align: center;
+    padding: 2em;
+
+}
+
+header {
+    background-color: #000000;
+    color: #fff;
+    padding: 2em;
 }
 
 section {
-    padding: 20px;
+    background: black;
+    height: 100%;
+    background-image: url(photoevent.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
-
-.event {
-    border: 1px solid #ddd;
-    margin-bottom: 20px;
+.event,
+.weather,
+.event-data {
+    border: 1px solid #000;
+    margin: auto;
     padding: 10px;
     background-color: #fff;
     border-radius: 5px;
+    width: 50%;
+    display: grid;
+    margin-bottom: 20px;
 }
 
-.rsvp-button {
-    background-color: #4CAF50;
+h2,
+#event-list,
+#event-title,
+#weather-title {
+    text-align: center;
+    background: black;
+    color: white;
+    margin: 0;
+    padding: 10px;
+}
+
+h1 {
+    background: black;
+    color: white;
+    width: 20%;
+    margin: auto;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+#event-list,
+#event-title,
+#weather-title {
+    text-align: center;
+    background: black;
+    color: white;
+}
+
+#search-input {
+    margin: auto;
+    padding: 0;
+    display: flex;
+}
+
+.btn-primary {
+    background-color: #4CAF50 !important;
     color: #fff;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
+    margin: auto;
+    padding: 0;
+    margin-top: 5px;
+    font-size: 18px;
+    border: solid 1px black;
     border-radius: 5px;
     cursor: pointer;
+    display: flex;
 }
-footer {
-    padding: 20px;
-    color:#fff
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
 }
+
+.event {
+    border: 1px solid #000;
+    margin-bottom: 20px;
+    margin: auto;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    width: 50%;
+    display: grid;
+
+}
+
+.weather {
+    border: 1px solid #000;
+    margin: auto;
+    padding: 10px;
+    margin-top: 5px;
+    background-color: #fff;
+    border-radius: 5px;
+    width: 50%;
+    display: grid;
+
+}
+
+.event-data {
+    border: 1px solid #000;
+    margin: 10px;
+}
+
+h2 {
+    text-align: center;
+    color: white !important;
+    margin: 0;
+    padding: 10px;
+}
+
+h1 {
+
+    background: black;
+    color: white;
+    width: 20%;
+    margin: auto;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+#event-list {
+    background: black;
+    color: white;
+    text-align: center;
+}
+
+#event-title {
+    text-align: center;
+    background: black;
+    color: white;
+}
+
+#weather-title {
+    text-align: center;
+    background: black;
+    color: white;
+}
+
+#search-input {
+
+    margin: auto;
+    padding: 0;
+    display: flex;
+}
+
+.btn-primary {
+    background-color: #4CAF50 !important;
+    color: #fff;
+    margin: auto;
+    padding: 0;
+    margin-top: 5px;
+    font-size: 18px;
+    border: solid 1px black;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+}
+
+
