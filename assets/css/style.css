@@ -16,44 +16,12 @@ header {
 
 }
 
-section {
+section, footer {
     background: black;
     background-image: url(photoevent.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-}
-
-h1 {
-    background: black;
-    color: white;
-    width: 20%;
-    margin: auto;
-    text-align: center;
-}
-
-p {
-    text-align: center;
-}
-
-
-#search-input {
-    margin: auto;
-    padding: 0;
-    display: flex;
-}
-
-.btn-primary {
-    background-color: #4CAF50 !important;
-    color: #fff;
-    margin: auto;
-    padding: 0;
-    margin-top: 5px;
-    font-size: 18px;
-    border: solid 1px black;
-    border-radius: 5px;
-    cursor: pointer;
-    display: flex;
 }
 
 .event {
@@ -142,4 +110,3 @@ p {
     cursor: pointer;
     display: flex;
 }
-
