@@ -5,52 +5,23 @@ body {
     background-color: #f4f4f4;
     height: 100vh;
 }
+html {
+    scroll-behavior: smooth;
+  }
 
 header {
     background-color: #000000;
     color: #fff;
     padding: 2em;
 
-}
-
-header {
-    background-color: #000000;
-    color: #fff;
-    padding: 2em;
 }
 
 section {
     background: black;
-    height: 100%;
     background-image: url(photoevent.jpg);
     background-repeat: no-repeat;
-    background-position: center;
     background-attachment: fixed;
     background-size: cover;
-}
-
-.event,
-.weather,
-.event-data {
-    border: 1px solid #000;
-    margin: auto;
-    padding: 10px;
-    background-color: #fff;
-    border-radius: 5px;
-    width: 50%;
-    display: grid;
-    margin-bottom: 20px;
-}
-
-h2,
-#event-list,
-#event-title,
-#weather-title {
-    text-align: center;
-    background: black;
-    color: white;
-    margin: 0;
-    padding: 10px;
 }
 
 h1 {
@@ -65,13 +36,6 @@ p {
     text-align: center;
 }
 
-#event-list,
-#event-title,
-#weather-title {
-    text-align: center;
-    background: black;
-    color: white;
-}
 
 #search-input {
     margin: auto;
@@ -90,12 +54,6 @@ p {
     border-radius: 5px;
     cursor: pointer;
     display: flex;
-}
-
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
 }
 
 .event {
@@ -184,5 +142,4 @@ p {
     cursor: pointer;
     display: flex;
 }
-
 
