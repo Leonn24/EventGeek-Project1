@@ -32,7 +32,7 @@ section {
     border-radius: 5px;
     width: 50%;
     display: grid;
-    
+
 }
 
 .weather {
@@ -44,8 +44,9 @@ section {
     border-radius: 5px;
     width: 50%;
     display: grid;
-    
+
 }
+
 .event-data {
     border: 1px solid #000;
     margin: 10px;
@@ -59,7 +60,7 @@ h2 {
 }
 
 h1 {
-    
+
     background: black;
     color: white;
     width: 20%;
@@ -70,6 +71,7 @@ h1 {
 p {
     text-align: center;
 }
+
 #event-list {
     background: black;
     color: white;
@@ -95,7 +97,7 @@ p {
     display: flex;
 }
 
-.btn-primary  {
+.btn-primary {
     background-color: #4CAF50 !important;
     color: #fff;
     margin: auto;
