@@ -5,6 +5,7 @@ body {
     background-color: #f4f4f4;
     height: 100vh;
 }
+
 html {
     scroll-behavior: smooth;
   }
@@ -16,12 +17,13 @@ header {
 
 }
 
-section, footer {
+section, footer, body {
     background: black;
     background-image: url(photoevent.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    
 }
 
 .event {
@@ -109,6 +111,23 @@ p {
     border-radius: 5px;
     cursor: pointer;
     display: flex;
+    align-items: center;
+}
+button {
+    background-color: #4CAF50 !important;
+    color: #fff;
+    margin: auto !important;
+    padding: 3px;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+    font-size: 18px;
+    border: solid 1px black !important;
+    border-radius: 5px !important;
+    cursor: pointer;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
 }
 .card{
     position: relative;
