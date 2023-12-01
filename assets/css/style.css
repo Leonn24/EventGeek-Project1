@@ -5,6 +5,9 @@ body {
     background-color: #f4f4f4;
     height: 100vh;
 }
+html {
+    scroll-behavior: smooth;
+  }
 
 header {
     background-color: #000000;
@@ -13,12 +16,10 @@ header {
 
 }
 
-section {
+section, footer {
     background: black;
-    height: 100%;
     background-image: url(photoevent.jpg);
     background-repeat: no-repeat;
-    background-position: center;
     background-attachment: fixed;
     background-size: cover;
 }
