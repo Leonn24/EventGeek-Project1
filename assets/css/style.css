@@ -113,7 +113,6 @@ p {
     display: flex;
     align-items: center;
 }
-
 button {
     background-color: #4CAF50 !important;
     color: #fff;
@@ -130,5 +129,11 @@ button {
     justify-content: center !important;
 
 }
-
-
+.card{
+    position: relative;
+    text-align: center;
+    background-color: #4CAF50;
+    float: right;
+    bottom: 80px;
+    right: 1%;
+}
