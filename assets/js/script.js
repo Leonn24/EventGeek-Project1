@@ -62,10 +62,10 @@ async function createEvent(data) {
                 <h3 id="event-list">${listData.title}</h3>
                 <p>Date: ${listData.datetime_utc}</p>
                 <p>Venue: ${listData.venue.name}</p>
-                <button onclick="window.open('${listData.venue.url}', '_blank')">Get Tickets</button>
+                <button class = "ticketButton" onclick="window.open('${listData.venue.url}', '_blank')">Get Tickets</button>
                 
             `;
-            eventElement.appendChild(getWeatherCard(listData.venue.city, listData.datetime_utc));
+            eventElement.appendChild(getWeatherCard(listData.venue.location.lat,listData.venue.location.lon, listData.datetime_utc));
             document.getElementById('event-data').appendChild(eventElement);
         }
     
@@ -76,55 +76,64 @@ async function createEvent(data) {
 
 //-------WEATHER API CODE-------//
 
-function getWeatherByLocation(){
-    var textInput = document.getElementById('search-input');
-    //will need to get the city name from the card the button being pressed is in (eventually)
-    loc = textInput.value;
-    var url = `https://api.openweathermap.org/data/2.5/weather?q=${loc}&appid=${weatherApiKey}&units=imperial`;
-    fetch(url)
-    .then(response => {
-        if (response.ok){
-            return response.json();
-        }
-        throw new Error('Something did not work.');
-    })
-    .then(function (data) {
-        var locName = data.name;
-        var locWeather = data.weather[0].main;
-        var locTemp = data.main.temp;
-
-        console.log(`City Name: ${locName}`);
-        console.log(`City Name: ${locWeather}`);
-        console.log(`City Name: ${locTemp}`);
-    })
-};
 //returns a div HTML element of class "card" so that it can be implemented
 //anywhere within building html of a event card
-function getWeatherCard(loc, date){
-    console.log(`Loc: ${loc}`);
-    var url = `https://api.openweathermap.org/data/2.5/forecast?q=${loc}&appid=${weatherApiKey}&units=imperial`;
+function getWeatherCard(locLat, locLon, date){
+    var url;
     var newCard = document.createElement('div');
     newCard.className = "card";
+    //console.log(`Lat: ${locLat} // Lon: ${locLon}`);
+    if (isCurrentDate(date)){
+        console.log("Did the current date.");
+        url = 
+        `https://api.openweathermap.org/data/2.5/weather?appid=${weatherApiKey}&units=imperial&lat=${locLat}&lon=${locLon}`;
+        fetch(url)
+        .then(response => {
+            if (response.ok){
+                return response.json();
+            }
+            throw new Error('Could not grab weather information!');
+        })
+        .then(function (data){
+            newIcon = document.createElement('i');
+            
+            newIcon.innerHTML = 
+            `<img src="https://openweathermap.org/img/wn/${data.weather[0].icon}.png" alt="weather-icon">
+            <h6 style = "font-size: 10px"> ${Math.round(data.main.temp)}°F </h6>`;
+            newCard.appendChild(newIcon);
+        })
+        .catch((error) => {
+            console.log(`Error finding location`)
+            console.log("Error: " + error);
+        });
+    }
+    else{
+        console.log("Did a future date.");
+        url = 
+        `https://api.openweathermap.org/data/2.5/forecast?appid=${weatherApiKey}&units=imperial&lat=${locLat}&lon=${locLon}`;
+        fetch(url)
+        .then(response => {
+            if (response.ok){
+                return response.json();
+            }
+            throw new Error('Could not grab forecast information!');
+        })
+        .then(function (data){
+            newIcon = document.createElement('i');
+            
+            newIcon.innerHTML = 
+            `<img src="https://openweathermap.org/img/wn/${data.list[getDateIndex(data.list, date)].weather[0].icon}.png" alt="weather-icon">
+            <h6 style = "font-size: 10px"> ${Math.round(data.list[0].main.temp)}°F </h6>`;
+            newCard.appendChild(newIcon);
+        })
+        .catch((error) => {
+            console.log(`Error finding location`)
+            console.log("Error: " + error);
+        });
+    }
+    
 
-    fetch(url)
-    .then(response => {
-        if (response.ok){
-            return response.json();
-        }
-        throw new Error('Could not grab weather information!');
-    })
-    .then(function (data){
-        newIcon = document.createElement('i');
-        newIcon.innerHTML = 
-        `<img src="https://openweathermap.org/img/wn/${data.list[getDateIndex(data.list,date)].weather[0].icon}.png" alt="weather-icon">
-        <h6 style = "font-size: 10px"> ${Math.round(data.list[0].main.temp)}°F </h6>`;
-        //getDateIndex(data.list, date);
-        newCard.appendChild(newIcon);
-    })
-    .catch((error) => {
-        console.log(`Error finding ${loc}`)
-        console.log("Error: " + error);
-    });
+    
     return newCard;
 }
 //returns the index within data.list where the item's date links up with the event date
@@ -133,10 +142,23 @@ function getDateIndex(list, date){
     for (let item of list){
         if (item.dt_txt !== null && date !== null
             && item.dt_txt.substring(0,10) === date.substring(0,10)){
-            //console.log("Found a " + date.substring(0,10));
             break;
         }
         dateIndex++;
     };
     return dateIndex;
 }
+
+function isCurrentDate(dateStr) {
+    //rearrange into MM-DD-YYYY and then make a date object using that
+    var newDateStr = `${dateStr.substring(5,7)}-${dateStr.substring(8,10)}-${dateStr.substring(0,4)}`;
+    const inputDate = new Date(newDateStr);
+
+    //put todays date into a variable
+    const today = new Date();
+    
+    //check if the passed string is equal to todays date.
+    return inputDate.getFullYear() === today.getFullYear() &&
+        inputDate.getMonth() === today.getMonth() &&
+        inputDate.getDate() === today.getDate();
+  }
