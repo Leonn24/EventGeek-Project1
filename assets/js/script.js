@@ -50,6 +50,11 @@ async function createEvent(data) {
 
         for (var i = 0; i < limit; i++) {
             var listData = data.events[i];
+            // var linkButton = document.createElement('button');
+            // linkButton.addEventListener('click', async function (event) {
+            //     preventDefault();
+            
+            
 
             var eventElement = document.createElement('div');
             eventElement.className = 'event-data';
@@ -57,9 +62,13 @@ async function createEvent(data) {
                 <h3 id="event-list">${listData.title}</h3>
                 <p>Date: ${listData.datetime_utc}</p>
                 <p>Venue: ${listData.venue.name}</p>
+                <button onclick="window.open('${listData.venue.url}', '_blank')">Get Tickets</button>
+                
             `;
+            
             document.getElementById('event-data').appendChild(eventElement);
         }
+    
     } else {
         console.log('No events found.');
     }
