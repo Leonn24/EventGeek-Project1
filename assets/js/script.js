@@ -63,8 +63,8 @@ async function createEvent(data) {
                 <p>Date: ${listData.datetime_utc}</p>
                 <p>Venue: ${listData.venue.name}</p>
                 <button onclick="window.open('${listData.venue.url}', '_blank')">Get Tickets</button>
-                
-            `;
+               
+                 `;
             
             document.getElementById('event-data').appendChild(eventElement);
         }
