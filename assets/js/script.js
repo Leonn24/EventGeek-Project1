@@ -84,7 +84,6 @@ function getWeatherCard(locLat, locLon, date){
     newCard.className = "card";
     //console.log(`Lat: ${locLat} // Lon: ${locLon}`);
     if (isCurrentDate(date)){
-        console.log("Did the current date.");
         url = 
         `https://api.openweathermap.org/data/2.5/weather?appid=${weatherApiKey}&units=imperial&lat=${locLat}&lon=${locLon}`;
         fetch(url)
@@ -108,7 +107,6 @@ function getWeatherCard(locLat, locLon, date){
         });
     }
     else{
-        console.log("Did a future date.");
         url = 
         `https://api.openweathermap.org/data/2.5/forecast?appid=${weatherApiKey}&units=imperial&lat=${locLat}&lon=${locLon}`;
         fetch(url)
