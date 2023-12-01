@@ -109,3 +109,11 @@ p {
     cursor: pointer;
     display: flex;
 }
+.card{
+    position: relative;
+    text-align: center;
+    background-color: #4CAF50;
+    float: right;
+    bottom: 80px;
+    right: 1%;
+}
