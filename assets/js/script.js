@@ -62,7 +62,7 @@ async function createEvent(data) {
                 <h3 id="event-list">${listData.title}</h3>
                 <p>Date: ${listData.datetime_utc}</p>
                 <p>Venue: ${listData.venue.name}</p>
-                <button onclick="window.open('${listData.venue.url}', '_blank')">Get Tickets</button>
+                <button class="ticketButton" onclick="window.open('${listData.venue.url}', '_blank')">Get Tickets</button>
                 
             `;
             eventElement.appendChild(getWeatherCard(listData.venue.city, listData.datetime_utc));
