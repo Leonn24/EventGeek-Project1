@@ -133,17 +133,8 @@ p {
 .card{
     position: relative;
     text-align: center;
-    background-color: #4CAF50;
+    background-color: #fffbfb;
     float: right;
     bottom: 100px;
     right: 2%;
 }
-
-
-
-
-
-
-
-
-
