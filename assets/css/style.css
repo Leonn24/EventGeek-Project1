@@ -13,8 +13,7 @@ html {
 header {
     background-color: #000000;
     color: #fff;
-    padding: 0.5em;
-    padding-top: 55px;
+    padding: 2em;
 
 }
 
@@ -56,9 +55,9 @@ section, footer, body {
     margin: 10px;
 }
 
-#title {
+h2 {
     text-align: center;
-    color: white;
+    color: white !important;
     margin: 0;
     padding: 10px;
 }
@@ -114,27 +113,27 @@ p {
     display: flex;
     align-items: center;
 }
-.ticketButton {
-    background-color: #4CAF50;
+button {
+    background-color: #4CAF50 !important;
     color: #fff;
-    margin: auto;
+    margin: auto !important;
     padding: 3px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
     font-size: 18px;
-    border: solid 1px black;
-    border-radius: 5px;
+    border: solid 1px black !important;
+    border-radius: 5px !important;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
 
 }
 .card{
     position: relative;
     text-align: center;
-    background-color: #fffbfb;
+    background-color: #4CAF50;
     float: right;
-    bottom: 100px;
-    right: 2%;
+    bottom: 80px;
+    right: 1%;
 }
