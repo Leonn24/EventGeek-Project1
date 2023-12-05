@@ -20,14 +20,13 @@ header {
 }
 
 section,
-footer,
+/* footer, */
 body {
     background: black;
     background-image: url(photoevent.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-
 }
 
 .event {
@@ -42,7 +41,7 @@ body {
 
 }
 
-.weather {
+/* .weather {
     border: 1px solid #000;
     margin: auto;
     padding: 10px;
@@ -52,7 +51,7 @@ body {
     width: 50%;
     display: grid;
 
-}
+} */
 
 .event-data {
     border: 1px solid #000;
@@ -84,6 +83,9 @@ p {
     background: black;
     color: white;
     text-align: center;
+    background: crimson;
+    color: black;
+    font-family: fantasy;
 }
 
 #event-title {
@@ -93,12 +95,12 @@ p {
     color: black;
 }
 
-#weather-title {
+/* #weather-title {
     font-family: fantasy;
     text-align: center;
     background: crimson;
     color: black;
-}
+} */
 
 #search-input {
 
@@ -127,31 +129,36 @@ p {
 
 
 .ticketButton {
-    background-color: #4CAF50;
+    background-color: #af4c4c;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #fff;
     margin: auto;
-    padding: 3px;
+    padding: 5;
     margin-top: 5px;
     margin-bottom: 5px;
-    font-size: 18px;
+    font-size: 15px;
     border: solid 1px black;
     border-radius: 5px;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 .card {
     position: relative;
     text-align: center;
-    background-color: #fffbfb;
+    background-color: #e69671;
     float: right;
     bottom: 100px;
     right: 2%;
 }
 
 footer {
-    color: white   
+    color: white;
+    position: fixed-bottom;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    padding: 15%;
 }
