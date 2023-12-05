@@ -147,5 +147,10 @@ p {
 }
 
 footer {
-color: white
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    text-shadow: 1px 1px 1px black, 2px 2px 1px black;
+    color: white
 }
