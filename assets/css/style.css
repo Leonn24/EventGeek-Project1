@@ -10,6 +10,7 @@ html {
     scroll-behavior: smooth;
 }
 
+
 header {
     font-family: fantasy;
     background-color: #000000;
@@ -28,6 +29,7 @@ body {
     background-attachment: fixed;
     background-size: cover;
 }
+
 
 .event {
     border: 1px solid #000;
