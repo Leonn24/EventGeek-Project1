@@ -33,7 +33,7 @@ async function fetchEvent(events) {
 function openTickets(url) {
     window.open(url, '_blank');
 }
-// Search button event listener 
+
 
 var searchBtn = document.getElementById('search-btn');
 searchBtn.addEventListener('click', async function (event) {
@@ -65,15 +65,13 @@ previousSearchButton.addEventListener('click', function () {
 
 async function onSearch(value){
     
-    
-
     if (value === "") {
 
         alert('Please Enter City');
     } else {
         try {
             var eventData = await fetchEvent(value);
-            createEvent(eventData); // Pass eventData to createEvent
+            createEvent(eventData); 
             createLastSearchInput(value)
         } catch (error) {
             console.log(error);
@@ -102,8 +100,7 @@ async function createEvent(events) {
 
         for (var i = 0; i < limit; i++) {
             var listData = events[i];
-            
-            
+
             var eventElement = document.createElement('div');
             eventElement.className = 'event-data';
             eventElement.innerHTML = `
@@ -111,8 +108,7 @@ async function createEvent(events) {
                 <p>Date: ${listData.datetime_utc.substring(0,10)}</p>
                 <p>Venue: ${listData.venue.name}</p>
                 <button class="ticketButton" data-url="${listData.venue.url}">Get Tickets</button>
-               
-                 `;
+            `;
             eventElement.appendChild(getWeatherCard(listData.venue.city, listData.datetime_utc));
             document.getElementById('event-data').appendChild(eventElement);
         }
@@ -123,9 +119,9 @@ async function createEvent(events) {
                 openTickets(this.getAttribute('data-url'));
             });
         });
-    
     } else {
-        console.log('No events found.');
+        // Display an alert when no events are found
+        alert('No events found.');
     }
 }
 
@@ -156,7 +152,7 @@ function getWeatherByLocation(){
 };
 //returns a div HTML element of class "card" so that it can be implemented
 //anywhere within building html of a event card
-function getWeatherCard(loc, date){
+function getWeatherCard(loc, date){     
     console.log(`Loc: ${loc}`);
     var url = `https://api.openweathermap.org/data/2.5/forecast?q=${loc}&appid=${weatherApiKey}&units=imperial`;
     var newCard = document.createElement('div');
