@@ -10,10 +10,10 @@ I also want to display the current weather conditions based on the events locati
 ## Acceptance Criteria
 
 ```
-GIVEN a search function to search events based on location
-WHEN I search for a city
-THEN I am presented with current and future events for that city
-WHEN I click on an event I can see information about the event and local weather
-THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, and the wind speed
+GIVEN a search function to search events based on State/City
+WHEN I search for a State
+THEN I am presented with current and future events for that State
+WHEN I search for city, I am presented with events around specific cities.
+Events will have a link that d
 
 ```

@@ -95,7 +95,7 @@ async function createEvent(events) {
     document.getElementById('event-data').innerHTML = "";
 
     if (events && events.length > 0) {
-        var limit = Math.min(events.length, 4);
+        var limit = Math.min(events.length, 9);
 
         for (var i = 0; i < limit; i++) {
             var listData = events[i];
