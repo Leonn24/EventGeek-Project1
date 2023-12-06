@@ -10,7 +10,6 @@ html {
     scroll-behavior: smooth;
 }
 
-
 header {
     font-family: fantasy;
     background-color: #000000;
@@ -19,6 +18,7 @@ header {
     padding-top: 60px;
 
 }
+
 
 section,
 /* footer, */
@@ -29,7 +29,6 @@ body {
     background-attachment: fixed;
     background-size: cover;
 }
-
 
 .event {
     border: 1px solid #000;
@@ -61,7 +60,7 @@ body {
 }
 
 #title {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: fantasy;
     text-align: center;
     color: white;
     margin: 0;
