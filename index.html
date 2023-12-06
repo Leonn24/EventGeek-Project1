@@ -12,36 +12,17 @@
 
 <body>
     <header>
-
-        <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">EventsGeek</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Upcoming Events</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Buy Tickets</a>
-                        </li>
-                    </ul>
-                    <input type="text" id="search-input" placeholder="New York, New Jersey, Etc">
-                    <button type="button" class="btn btn-primary" id="search-btn"
-                        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-                        Search City
-                    </button>
-                    <button id="previous-search-button">Use Previous Search</button>
-                </div>
+        <nav class="navbar fixed-top bg-body-tertiary">
+            <div class="navbar-brand" id="container">
+                <a class="navbar-brand">EventsGeek</a>
+                <input type="text" id="search-input" placeholder="New York, New Jersey, Etc">
+                <button type="button" class="btn btn-primary" id="search-btn">
+                    Search City</button>
+                <button type="button" class="btn btn-primary" id="previous-search-button"
+                    style="--bs-btn-paddingg-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Use
+                    Previous Search</button>
             </div>
         </nav>
-        <h1>EventsGeek</h1>
     </header>
 
     <section>
@@ -53,20 +34,7 @@
                 <p>Date: <span class="event-date">January 18th, 2024</span></p>
                 <p>Location: <span class="event-location">Metlife Stadium</span></p>
             </div>
-
-            <!-- RSVP Button -->
-            
         </div>
-
-        <div class="weather">
-            <h3 id="weather-title">Weather Nearby</h3>
-            <p>Temp: <span id="weather-temp">49&deg;</span></p>
-            <p>Wind: <span id="weather-wind">6.22 MPH</span></p>
-            <p>Humidity: 87%</p>
-
-        </div>
-
-
 
 
 
