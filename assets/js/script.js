@@ -22,7 +22,7 @@ async function fetchEvent(events) {
         var today = new Date()
            return data.events.filter(function (event){
             var eventDate = new Date (event.datetime_utc.substring(0,10))
-            return eventDate > today
+            return eventDate !== today
             })
         })
         .catch(function (error) {
@@ -95,7 +95,7 @@ async function createEvent(events) {
     document.getElementById('event-data').innerHTML = "";
 
     if (events && events.length > 0) {
-        var limit = Math.min(events.length, 4);
+        var limit = Math.min(events.length, 9);
 
         for (var i = 0; i < limit; i++) {
             var listData = events[i];
@@ -180,8 +180,8 @@ function getWeatherCard(locLat, locLon, date){
             console.log("Error: " + error);
         });
     }
-    
 
+    
     
     return newCard;
 }
