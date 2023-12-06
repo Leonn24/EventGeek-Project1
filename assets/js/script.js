@@ -180,8 +180,8 @@ function getWeatherCard(locLat, locLon, date){
             console.log("Error: " + error);
         });
     }
-    
 
+    
     
     return newCard;
 }
