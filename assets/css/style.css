@@ -37,9 +37,11 @@ body {
 }
 
 .navbar-brand {
-    margin: auto;
+    margin:auto;
+    padding-right: 2%;
     display: block;
     justify-content: center;
+    text-align: left;
 
 }
 
@@ -52,7 +54,6 @@ body {
     border-radius: 5px;
     width: 50%;
     display: grid;
-
 }
 
 
@@ -62,7 +63,7 @@ body {
 }
 
 #title {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: fantasy;
     text-align: center;
     color: white;
     margin: 0;
@@ -102,7 +103,7 @@ p {
 
 #previous-search-button {
     background-color: #af4c4c;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: fantasy;
     color: #000;
     margin: 10px;
     padding: 5;
@@ -118,7 +119,7 @@ p {
 
 .ticketButton {
     background-color: #af4c4c;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: fantasy;
     color: #fff;
     margin: auto;
     padding: 5;
@@ -150,7 +151,6 @@ footer {
     height: 30px;
     padding: 15%;
 }
-
 
 
 #search-btn {
