@@ -12,6 +12,7 @@ html {
 }
 
 header {
+    font-family: fantasy;
     background-color: #000000;
     color: #fff;
     padding: 0.5em;

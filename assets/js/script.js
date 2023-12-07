@@ -22,7 +22,7 @@ async function fetchEvent(events) {
         var today = new Date()
            return data.events.filter(function (event){
             var eventDate = new Date (event.datetime_utc.substring(0,10))
-            return eventDate > today
+            return eventDate !== today
             })
         })
         .catch(function (error) {
