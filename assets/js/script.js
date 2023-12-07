@@ -230,3 +230,16 @@ function isCurrentDate(dateStr) {
         inputDate.getMonth() === today.getMonth() &&
         inputDate.getDate() === today.getDate();
   }
+
+    //-------MISC CODE-------//
+    function backHome(){
+        location.reload();
+      }
+      function checkKey(event){
+        if(event.keyCode == 13) {
+            event.preventDefault();
+            onSearch(textInput.value);        
+        }
+      }
+      var textInput = document.getElementById('search-input');
+      textInput.addEventListener('keydown', checkKey);
