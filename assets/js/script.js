@@ -101,7 +101,9 @@ function createLastSearchInput(value) {
 
 // Function to create event and appends to element //
 async function createEvent(events) {
-
+    var eventDataContainer = document.getElementById('event-data');
+    eventDataContainer.innerHTML = "";
+    
     document.getElementById('event-data').innerHTML = "";
 
     if (events && events.length > 0) {
@@ -131,6 +133,11 @@ async function createEvent(events) {
     } else {
         // Display an alert when no events are found
         document.getElementById('error').innerHTML = 'No Events';
+        var noEventsImage = document.createElement('img');
+        noEventsImage.src = 'assets/css/Error.png'; // Replace with the actual path to your image
+        noEventsImage.alt = 'No Events Found';
+        eventDataContainer.appendChild(noEventsImage);
+
     }
 }
 
