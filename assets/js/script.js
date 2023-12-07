@@ -22,7 +22,7 @@ async function fetchEvent(events) {
         var today = new Date()
            return data.events.filter(function (event){
             var eventDate = new Date (event.datetime_utc.substring(0,10))
-            return eventDate > today
+            return eventDate !== today
             })
         })
         .catch(function (error) {
@@ -54,11 +54,13 @@ previousSearchButton.addEventListener('click', function () {
             document.getElementById('search-input').value = city
             onSearch(city);
         } else {
-            alert('No Previous Search Input')
+            document.getElementById('error').innerHTML = 'No Previous Search Input';
+        
+
         }
      
     } else {
-        alert('No previous search input found.');
+        document.getElementById('error').innerHTML = 'No Previous Search Input';
     }
 });
 
@@ -66,7 +68,8 @@ async function onSearch(value){
     
     if (value === "") {
 
-        alert('Please Enter City');
+
+        document.getElementById('error').innerHTML = 'Please Enter City';
     } else {
         try {
             var eventData = await fetchEvent(value);
@@ -95,7 +98,7 @@ async function createEvent(events) {
     document.getElementById('event-data').innerHTML = "";
 
     if (events && events.length > 0) {
-        var limit = Math.min(events.length, 4);
+        var limit = Math.min(events.length, 9);
 
         for (var i = 0; i < limit; i++) {
             var listData = events[i];
@@ -120,7 +123,7 @@ async function createEvent(events) {
         });
     } else {
         // Display an alert when no events are found
-        alert('No events found.');
+        document.getElementById('error').innerHTML = 'No Events';
     }
 }
 

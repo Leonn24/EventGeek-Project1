@@ -1,32 +1,47 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    height: 100vh;
+    height: 100%;
+
 }
 
 html {
     scroll-behavior: smooth;
-  }
+}
 
 header {
+    font-family: fantasy;
     background-color: #000000;
     color: #fff;
-    padding: 0.5em;
-    padding-top: 55px;
     padding: 0.5em;
     padding-top: 55px;
 
 }
 
-section, footer, body {
+section,
+body {
     background: black;
     background-image: url(photoevent.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    
+    padding-top: 20px;
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.navbar-brand {
+    margin:auto;
+    padding-right: 2%;
+    display: block;
+    justify-content: center;
+    text-align: left;  
 }
 
 .event {
@@ -38,20 +53,8 @@ section, footer, body {
     border-radius: 5px;
     width: 50%;
     display: grid;
-
 }
 
-.weather {
-    border: 1px solid #000;
-    margin: auto;
-    padding: 10px;
-    margin-top: 5px;
-    background-color: #fff;
-    border-radius: 5px;
-    width: 50%;
-    display: grid;
-
-}
 
 .event-data {
     border: 1px solid #000;
@@ -59,6 +62,7 @@ section, footer, body {
 }
 
 #title {
+    font-family: fantasy;
     text-align: center;
     color: white;
     margin: 0;
@@ -66,7 +70,6 @@ section, footer, body {
 }
 
 h1 {
-
     background: black;
     color: white;
     width: 20%;
@@ -76,67 +79,109 @@ h1 {
 
 p {
     text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
 
 #event-list {
     background: black;
     color: white;
     text-align: center;
+    background: crimson;
+    color: black;
+    font-family: fantasy;
 }
 
 #event-title {
+    font-family: fantasy;
     text-align: center;
-    background: black;
-    color: white;
+    background: crimson;
+    color: black;
 }
 
-#weather-title {
-    text-align: center;
-    background: black;
-    color: white;
-}
 
-#search-input {
-
-    margin: auto;
-    padding: 0;
-    display: flex;
-}
-
-.btn-primary {
-    background-color: #4CAF50 !important;
-    color: #fff;
-    margin: auto;
-    padding: 0;
-    margin-top: 5px;
-    font-size: 18px;
+#previous-search-button {
+    background-color: #af4c4c;
+    font-family: fantasy;
+    color: #000;
+    margin: 10px;
+    padding: 5;
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 1rem;
     border: solid 1px black;
     border-radius: 5px;
     cursor: pointer;
     display: flex;
-    align-items: center;
 }
+
+
 .ticketButton {
-    background-color: #4CAF50;
+    background-color: #af4c4c;
+    font-family: fantasy;
     color: #fff;
     margin: auto;
-    padding: 3px;
+    padding: 5;
     margin-top: 5px;
     margin-bottom: 5px;
-    font-size: 18px;
+    font-size: 15px;
     border: solid 1px black;
     border-radius: 5px;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
-.card{
+
+.card {
     position: relative;
     text-align: center;
-    background-color: #fffbfb;
+    background-color: #e69671;
     float: right;
     bottom: 100px;
     right: 2%;
+}
+
+footer {
+    color: white;
+    position: fixed-bottom;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    padding: 15%;
+}
+
+#search-btn {
+    background-color: #af4c4c;
+    display: block;
+    margin: 10px;
+    padding: 0.375rem 0.75rem;
+    margin-left: 20px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #000;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-clip: padding-box;
+    border: solid 1px black;
+    border-radius: var(--bs-border-radius);
+}
+
+a {
+    margin-left: 60%;
+
+}
+
+#search-input {
+    padding: 10px;
+    margin: auto;
+}
+
+#error {
+    color: white;
+    font-size: 20px;
+    margin-top: 25px;
+
 }
