@@ -190,8 +190,6 @@ function getWeatherCard(locLat, locLon, date){
 }
 //returns the index within data.list where the item's date links up with the event date
 function getDateIndex(list, date){
-    console.log('list', list)
-    console.log('date', date)
     var dateIndex = 0;
     for (let item of list){
         if (item.dt_txt !== null && date !== null
@@ -221,3 +219,11 @@ function isCurrentDate(dateStr) {
   function backHome(){
     location.reload();
   }
+  function checkKey(event){
+    if(event.keyCode == 13) {
+        event.preventDefault();
+        onSearch(textInput.value);        
+    }
+  }
+  var textInput = document.getElementById('search-input');
+  textInput.addEventListener('keydown', checkKey);
