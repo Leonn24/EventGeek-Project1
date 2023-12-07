@@ -14,29 +14,28 @@
     <header>
         <nav class="navbar fixed-top bg-body-tertiary">
             <div class="navbar-brand" id="container">
-                <a class="navbar-brand">EventsGeek</a>
+                <a class="navbar-brand" onclick="backHome()">EventsGeek</a>
                 <input type="text" id="search-input" placeholder="New York, New Jersey, Etc">
                 <button type="button" class="btn btn-primary" id="search-btn">
                     Search City</button>
                 <button type="button" class="btn btn-primary" id="previous-search-button"
-                    style="--bs-btn-paddingg-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Use
+                    style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Use
                     Previous Search</button>
             </div>
         </nav>
     </header>
-
+    <p id="error"></p>
     <section>
-        <h2 id="title">Upcoming Events</h2>
+        <h2 id="title">EventsGeek</h2>
 
         <div class="event">
             <div id="event-data">
-                <h3 id="event-title">Concert/Theater/Sport Event</h3>
-                <p>Date: <span class="event-date">January 18th, 2024</span></p>
-                <p>Location: <span class="event-location">Metlife Stadium</span></p>
+                <h3 id="event-title">Find Events Near You</h3>
+                <p>Dates: <span class="event-date">Multiple Dates!</span></p>
+                <p>Locations: <span class="event-location">Multiple Locations in the Country!</span></p>
+                <p>Types: <span class="event-date">Concerts/Theater/Sports Events and More!</span></p>
             </div>
         </div>
-
-
 
     </section>
 
