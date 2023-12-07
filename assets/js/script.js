@@ -54,11 +54,13 @@ previousSearchButton.addEventListener('click', function () {
             document.getElementById('search-input').value = city
             onSearch(city);
         } else {
-            alert('No Previous Search Input')
+            document.getElementById('error').innerHTML = 'No Previous Search Input';
+        
+
         }
      
     } else {
-        alert('No previous search input found.');
+        document.getElementById('error').innerHTML = 'No Previous Search Input';
     }
 });
 
@@ -66,7 +68,8 @@ async function onSearch(value){
     
     if (value === "") {
 
-        alert('Please Enter City');
+
+        document.getElementById('error').innerHTML = 'Please Enter City';
     } else {
         try {
             var eventData = await fetchEvent(value);
@@ -120,7 +123,7 @@ async function createEvent(events) {
         });
     } else {
         // Display an alert when no events are found
-        alert('No events found.');
+        document.getElementById('error').innerHTML = 'No Events';
     }
 }
 
@@ -180,8 +183,8 @@ function getWeatherCard(locLat, locLon, date){
             console.log("Error: " + error);
         });
     }
-
     
+
     
     return newCard;
 }

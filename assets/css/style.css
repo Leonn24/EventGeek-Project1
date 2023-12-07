@@ -39,8 +39,7 @@ body {
     padding-right: 2%;
     display: block;
     justify-content: center;
-    text-align: left;
-
+    text-align: left;  
 }
 
 .event {
@@ -151,7 +150,6 @@ footer {
     padding: 15%;
 }
 
-
 #search-btn {
     background-color: #af4c4c;
     display: block;
@@ -177,11 +175,11 @@ a {
 
 #search-input {
     margin: auto;
-    padding: 0;
-    display: flex;
-    position: relative;
-    width: 320px;
-    height: 35px;
-    background-color: #F5F5F5;
-    border-radius: 5px;
+}
+
+#error {
+    color: white;
+    font-size: 20px;
+    margin-top: 25px;
+
 }
