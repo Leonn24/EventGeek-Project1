@@ -12,7 +12,7 @@ html {
 }
 
 header {
-    font-family: fantasy;
+    font-family: Squada One;
     background-color: #000000;
     color: #fff;
     padding: 0.5em;
@@ -68,11 +68,15 @@ div.event {
 }
 
 #title {
-    font-family: fantasy;
+    font-family: Squada One;
     text-align: center;
     color: white;
     margin: 0;
     padding: 10px;
+}
+
+h2 {
+    font-size: 50px;
 }
 
 h1 {
@@ -95,7 +99,7 @@ p {
     text-align: center;
     background: crimson;
     color: black;
-    font-family: fantasy;
+    font-family: Squada One;
 }
 
 #event-title {
@@ -108,7 +112,7 @@ p {
 
 #previous-search-button {
     background-color: #af4c4c;
-    font-family: fantasy;
+    font-family: Squada One;
     color: #000;
     margin: 10px;
     padding: 5;
@@ -124,7 +128,7 @@ p {
 
 .ticketButton {
     background-color: #af4c4c;
-    font-family: fantasy;
+    font-family: Squada One;
     color: #fff;
     margin: auto;
     padding: 5;
