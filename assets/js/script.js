@@ -34,12 +34,17 @@ function openTickets(url) {
     window.open(url, '_blank');
 }
 
+function refreshPage(){
+    window.location.reload(searchBtn);
+}
+
 
 var searchBtn = document.getElementById('search-btn');
 searchBtn.addEventListener('click', async function (event) {
     event.preventDefault();
     var textInput = document.getElementById('search-input');
     onSearch(textInput.value);
+
 });
 
 var previousSearchButton = document.getElementById('previous-search-button');
@@ -65,6 +70,8 @@ previousSearchButton.addEventListener('click', function () {
 });
 
 async function onSearch(value){
+    var errorElement = document.getElementById('error');
+    errorElement.innerHTML = "";
     
     if (value === "") {
 
