@@ -11,7 +11,7 @@ html {
 }
 
 header {
-    font-family: fantasy;
+    font-family:  Squada One;
     background-color: #000000;
     color: #fff;
     padding: 0.5em;
@@ -32,14 +32,20 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    padding-left: 27%;
+    padding-right: 27%;
 }
 
 .navbar-brand {
     margin:auto;
     padding-right: 2%;
     display: block;
+    color: white;
     justify-content: center;
     text-align: left; 
+    background-color:rgb(43, 5, 5);
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .event {
@@ -65,7 +71,7 @@ div.event {
 }
 
 #title {
-    font-family: fantasy;
+    font-family: Squada One;
     text-align: center;
     color: white;
     margin: 0;
@@ -93,11 +99,11 @@ p {
     text-align: center;
     background: crimson;
     color: black;
-    font-family: fantasy;
+    font-family: Squada One;
 }
 
 #event-title {
-    font-family: fantasy;
+    font-family: Anton;
     text-align: center;
     background: crimson;
     color: black;
