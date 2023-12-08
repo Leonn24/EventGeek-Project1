@@ -20,8 +20,13 @@ header {
 
 }
 
-section,
+section{
+    flex:1;
+}
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 97vh;
     background: black;
     background-image: url(photoevent.jpg);
     background-repeat: no-repeat;
@@ -137,7 +142,7 @@ p {
 .card {
     position: relative;
     text-align: center;
-    background-color: #e69671;
+    background-color: #dca195;
     float: right;
     bottom: 100px;
     right: 2%;
@@ -149,7 +154,7 @@ footer {
     bottom: 0;
     width: 100%;
     height: 30px;
-    padding: 15%;
+    padding-top: 15%;
 }
 
 #search-btn {
