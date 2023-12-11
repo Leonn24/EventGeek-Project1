@@ -12,7 +12,7 @@ html {
 }
 
 header {
-    font-family: fantasy;
+    font-family: Squada One;
     background-color: #000000;
     color: #fff;
     padding: 0.5em;
@@ -34,14 +34,16 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    background-color:transparent !important;
 }
 
 .navbar-brand {
-    margin:auto;
+    margin: auto;
     padding-right: 2%;
     display: block;
     justify-content: center;
-    text-align: left;  
+    text-align: left;
+    cursor: pointer;
 }
 
 .event {
@@ -53,20 +55,32 @@ body {
     border-radius: 5px;
     width: 50%;
     display: grid;
+    /* background-image: url(photoevent.jpg); */
 }
 
 
 .event-data {
     border: 1px solid #000;
     margin: 10px;
+    /* background-image: url(photoevent.jpg); */
 }
 
+div.event {
+    background-color: rgb(43, 5, 5);
+    color: #fff
+}
+
+
 #title {
-    font-family: fantasy;
+    font-family: Squada One;
     text-align: center;
     color: white;
     margin: 0;
     padding: 10px;
+}
+
+h2 {
+    font-size: 50px;
 }
 
 h1 {
@@ -89,11 +103,11 @@ p {
     text-align: center;
     background: crimson;
     color: black;
-    font-family: fantasy;
+    font-family: Squada One;
 }
 
 #event-title {
-    font-family: fantasy;
+    font-family: Anton;
     text-align: center;
     background: crimson;
     color: black;
@@ -102,7 +116,7 @@ p {
 
 #previous-search-button {
     background-color: #af4c4c;
-    font-family: fantasy;
+    font-family: Squada One;
     color: #000;
     margin: 10px;
     padding: 5;
@@ -118,7 +132,7 @@ p {
 
 .ticketButton {
     background-color: #af4c4c;
-    font-family: fantasy;
+    font-family: Squada One;
     color: #fff;
     margin: auto;
     padding: 5;
