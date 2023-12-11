@@ -17,3 +17,13 @@ WHEN I search for city, I am presented with events around specific cities.
 Events section will have a button that directs them to purchase tickets.
 
 ```
+
+Heres the repo containing the project
+
+https://github.com/Leonn24/group3-project
+
+
+![main](/assets/css/mainpage.png)
+![eventlist](/assets/css/eventslist.png)
+![error](/assets/css/error404.png)
+
