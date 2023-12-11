@@ -12,7 +12,7 @@ const LAST_SEARCHED_ITEM = 'lastInput';
 
 //-------EVENTS API CODE-------//
 
-// Function to fetch events data //
+// -------Async function to fewtch events data from API based on input------- //
 async function fetchEvent(events) {
     return fetch(`${eventApiUrl}&q=${events}`)
         .then(function (response) {
@@ -30,22 +30,28 @@ async function fetchEvent(events) {
         });
 }
 
+//------ Function that opens tickets in a new browser window------ //
 function openTickets(url) {
     window.open(url, '_blank');
 }
 
+function refreshPage(){
+    window.location.reload(searchBtn);
+}
 
+// ------ Event Listener for search button ------//
 var searchBtn = document.getElementById('search-btn');
 searchBtn.addEventListener('click', async function (event) {
     event.preventDefault();
     var textInput = document.getElementById('search-input');
     onSearch(textInput.value);
+
 });
 
+// ------- Event Listener for previous search button ------//
 var previousSearchButton = document.getElementById('previous-search-button');
 previousSearchButton.addEventListener('click', function () {
     var previousSearchInput = JSON.parse(localStorage.getItem(LAST_SEARCHED_ITEM));
-    // console.log('test')
 
     if (previousSearchInput !== null) {
         var lastInput = JSON.parse(localStorage.getItem(LAST_SEARCHED_ITEM));
@@ -64,13 +70,18 @@ previousSearchButton.addEventListener('click', function () {
     }
 });
 
+
+// ------ Async funtion to handle search process ------//
 async function onSearch(value){
+    var errorElement = document.getElementById('error');
+    errorElement.innerHTML = "";
     
     if (value === "") {
 
 
         document.getElementById('error').innerHTML = 'Please Enter City';
     } else {
+        //------Fetches events and displays them ------//
         try {
             var eventData = await fetchEvent(value);
             createEvent(eventData); 
@@ -81,9 +92,9 @@ async function onSearch(value){
     }
 }
 
+// ------ Function that stores last searched input in local storage ------//
 function createLastSearchInput(value) {
    var lastInput = JSON.parse(localStorage.getItem(LAST_SEARCHED_ITEM)) ?? []
-//    console.log('test', lastInput)
    if(lastInput.indexOf(value) === -1){
     lastInput.push(value)
    localStorage.setItem(LAST_SEARCHED_ITEM, JSON.stringify(lastInput));
@@ -94,7 +105,9 @@ function createLastSearchInput(value) {
 
 // Function to create event and appends to element //
 async function createEvent(events) {
-
+    var eventDataContainer = document.getElementById('event-data');
+    eventDataContainer.innerHTML = "";
+    
     document.getElementById('event-data').innerHTML = "";
 
     if (events && events.length > 0) {
@@ -122,8 +135,13 @@ async function createEvent(events) {
             });
         });
     } else {
-        // Display an alert when no events are found
+        //------ Display an alert when no events are found ------//
         document.getElementById('error').innerHTML = 'No Events';
+        var noEventsImage = document.createElement('img');
+        noEventsImage.src = 'assets/css/Error.png'; 
+        noEventsImage.alt = 'No Events Found';
+        eventDataContainer.appendChild(noEventsImage);
+
     }
 }
 
@@ -136,7 +154,6 @@ function getWeatherCard(locLat, locLon, date){
     var url;
     var newCard = document.createElement('div');
     newCard.className = "card";
-    //console.log(`Lat: ${locLat} // Lon: ${locLon}`);
     if (isCurrentDate(date)){
         url = 
         `https://api.openweathermap.org/data/2.5/weather?appid=${weatherApiKey}&units=imperial&lat=${locLat}&lon=${locLon}`;
@@ -216,3 +233,16 @@ function isCurrentDate(dateStr) {
         inputDate.getMonth() === today.getMonth() &&
         inputDate.getDate() === today.getDate();
   }
+
+    //-------MISC CODE-------//
+    function backHome(){
+        location.reload();
+      }
+      function checkKey(event){
+        if(event.keyCode == 13) {
+            event.preventDefault();
+            onSearch(textInput.value);        
+        }
+      }
+      var textInput = document.getElementById('search-input');
+      textInput.addEventListener('keydown', checkKey);
