@@ -34,15 +34,16 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    background-color:transparent !important;
 }
 
 .navbar-brand {
-    margin:auto;
+    margin: auto;
     padding-right: 2%;
     display: block;
     justify-content: center;
     text-align: left;
-    cursor: pointer;  
+    cursor: pointer;
 }
 
 .event {
@@ -54,18 +55,21 @@ body {
     border-radius: 5px;
     width: 50%;
     display: grid;
+    /* background-image: url(photoevent.jpg); */
 }
 
 
 .event-data {
     border: 1px solid #000;
     margin: 10px;
+    /* background-image: url(photoevent.jpg); */
 }
 
 div.event {
     background-color: rgb(43, 5, 5);
-    color:#fff
+    color: #fff
 }
+
 
 #title {
     font-family: Squada One;
