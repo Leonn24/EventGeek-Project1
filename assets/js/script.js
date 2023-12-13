@@ -13,6 +13,7 @@ const LAST_SEARCHED_ITEM = 'lastInput';
 //-------EVENTS API CODE-------//
 
 // -------Async function to fewtch events data from API based on input------- //
+
 async function fetchEvent(events) {
     return fetch(`${eventApiUrl}&q=${events}`)
         .then(function (response) {
@@ -40,13 +41,15 @@ function refreshPage(){
 }
 
 // ------ Event Listener for search button ------//
+document.addEventListener('DOMContentLoaded', function () {
 var searchBtn = document.getElementById('search-btn');
 searchBtn.addEventListener('click', async function (event) {
     event.preventDefault();
     var textInput = document.getElementById('search-input');
     onSearch(textInput.value);
-
 });
+});
+
 
 // ------- Event Listener for previous search button ------//
 var previousSearchButton = document.getElementById('previous-search-button');
