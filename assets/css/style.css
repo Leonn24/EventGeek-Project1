@@ -62,6 +62,7 @@ body {
 .event-data {
     border: 1px solid #000;
     margin: 10px;
+    /* background-image: url(photoevent.jpg); */
 }
 
 div.event {
