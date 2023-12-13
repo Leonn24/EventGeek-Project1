@@ -23,7 +23,7 @@ Heres the repo containing the project
 https://github.com/Leonn24/group3-project
 
 
-![main](/assets/css/images/mainpage.png)
-![eventlist](/assets/css/images/eventslist.png)
-![error](/assets/css/images/error404.png)
+![main](/assets/images/mainpage.png)
+![eventlist](/assets/images/eventslist.png)
+![error](/assets/images/error404.png)
 
